@@ -1,14 +1,15 @@
-let books = []
+let getBooks = []
 let otherBooks = []
 let enterBook = prompt('enter a book name')
 let aboutBook = enterBook.toLowerCase()
-function nameOfBook(){ 
+
+function nameOfBook(...books){ 
 if(aboutBook.includes("у")){
-   books.push(enterBook)
-   console.log('Book name where we lave a russian letter у', books)
+   getBooks.push(enterBook)
+   console.log('Book name where we lave a russian letter у',getBooks)
 }else{
    otherBooks.push(enterBook)
-   console.log('A book where is not any russian letter у',otherBooks)
+   console.log('This book does not contains a russian letter у',otherBooks)
 }
 }
-nameOfBook()
+nameOfBook(enterBook)
